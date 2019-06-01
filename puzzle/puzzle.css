@@ -111,3 +111,9 @@ button:active{
 #record > p{
     font-size: 18px;
 }
+
+.fireworks{
+    position: absolute;
+    width: 6px;
+    height: 6px;
+}

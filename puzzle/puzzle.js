@@ -1,3 +1,5 @@
+document.write("<script type='text/javascript' src='firework.js'></script>");
+
 var time = 0;
 var pause = false;
 var start = false;
@@ -30,6 +32,8 @@ window.onload = function () {
         puzzle.children[i].onclick = removePuzzle;
     }
     setInterval(count, 1000);
+
+    // randomFireworks();
 }
 
 function initialize(puzzleArea) {
@@ -131,9 +135,27 @@ function check() {
     if (checkArr.join('-') == '1-2-3-4-5-6-7-8-') {
         congra = document.createElement('p');
         congra.innerHTML = '恭喜你完成了这个无聊的游戏！';
+        randomFireworks();
         congra.setAttribute('id', 'congratulations');
         start = false;
         congra.style.color = 'red';
         record.firstElementChild.append(congra);
+    }
+}
+
+function cheat() {
+    puzzleArr.sort((x, y) => {
+        if (x == blank) {
+            return 1;
+        } else if (y == blank) {
+            return -1;
+        } else {
+            return x.innerText > y.innerText ? 1 : -1;
+        }
+    });
+    puzzleArr.forEach(element => puzzle.append(element));
+    for (let i = 0; i < 9; ++i) {
+        puzzle.children[i].style.left = (i % 3) * 150 + 'px';
+        puzzle.children[i].style.top = Math.floor(i / 3) * 150 + 'px';
     }
 }
