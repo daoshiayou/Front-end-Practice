@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body{
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    text-align: center;
+    margin: 10px;
+    text-shadow: 0px 1px #c5c4c4;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.game{
+    max-width: 700px;
+    max-height: 700px;
+    margin: 0 auto;
+}
+
+.puzzle{
+    width: 450px;
+    height: 450px;
+    background-color: rgba(238, 255, 83,0.5);
+    float: left;
+    -webkit-transition: 0.3s;/*浏览器前缀，兼容其他浏览器 chrome*/
+    -moz-transition: 0.3s;/*firefox*/
+    -ms-transition: 0.3s;/*ie*/
+    -o-transition: 0.3s;/*opera*/
+    transition: 0.3s;
+}
+
+.puzzle > .blank{
+    width: 150px;
+    height: 150px;
+    float: left;
+}
+
+.puzzle > [class^=piece]{
+    transition: color 0.2s;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(245, 124, 124, 0.9);
+    float: left;
+    font-size: 100px;
+    text-align: center;
+    color: rgb(102, 240, 249);
+    cursor: pointer;
+}
+
+.puzzle > [class^=piece]:hover{
+    color: rgb(255,255,255);
+    box-shadow: 1px 2px 5px #686868;
+}
+
+.menu{
+    width: 200px;
+    height: 450px;
+    margin-left: 30px;
+    float: left;
+}
+
+button{
+    outline: none;
+    transition: box-shadow 0.2s;
+    margin-left: 30px;
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: rgba(245, 124, 124, 0.9);
+    box-shadow: 0px 2px 5px #444444;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover{
+    box-shadow: 0px 1px 5px #444444;
+}
+
+button:active{
+    box-shadow: 0px 1px 2px #444444;
+}
+
+#record > p{
+    font-size: 18px;
+}
