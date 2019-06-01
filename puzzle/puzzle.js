@@ -55,12 +55,16 @@ function startGame() {
 
 function pauseGame() {
     pause = !pause;
-    //todo: a cover to stop player removing the puzzle
-    // var cover = document.createElement('span');
-    // cover.innerHTML='<span style="background-color: while width:450px height:450px">暂停中</span>';
-    // if (pause) {
-    //     puzzle.append(cover);
-    // }
+    //a cover to stop player removing the puzzle
+    if (pause) {
+        for (let i = 8; i >= 0; --i) {
+            puzzle.children[i].remove();
+        }
+        puzzle.innerHTML = '<b> (´・ω・)つ旦</b>';
+    } else {
+        puzzle.innerText = '';
+        puzzleArr.forEach(element => puzzle.append(element));
+    }
 }
 
 function restartGame() {
@@ -101,7 +105,6 @@ function removePuzzle() {
         var blankInd = puzzleArr.indexOf(blank);
         if (blankInd == index + 1 || blankInd == index - 1 || blankInd == index + 3 || blankInd == index - 3) {
             [puzzleArr[index], puzzleArr[blankInd]] = [puzzleArr[blankInd], puzzleArr[index]];
-            // puzzleArr.forEach(element => puzzle.append(element));
             [blank.style.top, this.style.top] = [this.style.top, blank.style.top];
             [blank.style.left, this.style.left] = [this.style.left, blank.style.left];
             check();
@@ -112,7 +115,6 @@ function removePuzzle() {
 function check() {
     var checkArr = [];
     puzzleArr.forEach(element => checkArr.push(element.innerText));
-    console.log(checkArr);
     if (checkArr.join('-') == '1-2-3-4-5-6-7-8-') {
         congra = document.createElement('p');
         congra.innerHTML = '恭喜你完成了这个无聊的游戏！';

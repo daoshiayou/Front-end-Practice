@@ -30,10 +30,24 @@ header{
 
 .puzzle{
     position: relative;
+    /* use browser prefixes symbolically */
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
     width: 450px;
     height: 450px;
     background-color: rgba(238, 255, 83,0.5);
+    text-align: center;
     float: left;
+}
+
+.puzzle > b{
+    font-size: 60px;
+    line-height: 400px;
+    color: rgb(211, 211, 211);
+    text-shadow: 1px 2px 3px white;
 }
 
 .puzzle > .blank{
