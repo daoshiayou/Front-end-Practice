@@ -1,5 +1,5 @@
 var time = 0;
-var pause = true;
+var pause = false;
 var start = false;
 
 var startButtom;
@@ -70,6 +70,8 @@ function pauseGame() {
 function restartGame() {
     initialize(puzzle);
     time = 0;
+    start = false;
+    pause = false;
     record.setAttribute('hidden', true);
     startButtom.removeAttribute('hidden');
     var del = document.querySelector('#congratulations');
@@ -109,6 +111,17 @@ function removePuzzle() {
             [blank.style.left, this.style.left] = [this.style.left, blank.style.left];
             check();
         }
+    } else {
+        var info = document.createElement('p');
+        info.style.marginLeft = '15px';
+        info.style.fontSize = '20px';
+        if (Math.random() < 0.5) {
+            info.innerText = '\\屠龙宝刀点击就送/';
+        } else {
+            info.innerText = '\\是兄弟就来砍我!/';
+        }
+        document.querySelector('.menu').insertBefore(info, startButtom);
+        setTimeout('document.querySelector(".menu").children[0].remove();', 600);
     }
 }
 
