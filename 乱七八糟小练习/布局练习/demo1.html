@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            text-align: center;
+            line-height: 35px;
+        }
+
+        .container {
+            width: 970px;
+            margin: auto;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .fr {
+            float: right;
+        }
+
+        .clearfix:before,
+        .clearfix:after {
+            content: "";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .header {
+            width: 970px;
+            height: 103px;
+            margin: 0 auto;
+        }
+
+        .header>.logo {
+            background-color: red;
+            width: 277px;
+            height: 103px;
+            float: left;
+        }
+
+        .header>.language {
+            width: 137px;
+            height: 49px;
+            float: right;
+            background-color: #00FF00;
+        }
+
+        .header>.nav {
+            width: 679px;
+            height: 46px;
+            margin-top: 8px;
+            float: right;
+            background-color: #00FF00;
+        }
+
+        .content {
+            width: 970px;
+            /* height: 435px; */
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+
+        .content>.banner {
+            width: 310px;
+            height: 435px;
+            float: left;
+            background-color: #FFCC00;
+        }
+
+        .content .main>.news {
+            float: left;
+            margin-left: 10px;
+        }
+
+        .news1 {
+            width: 450px;
+            height: 240px;
+            background-color: #3399FF;
+        }
+
+        .news2 {
+            width: 450px;
+            height: 110px;
+            background-color: #3399FF;
+            margin-top: 10px;
+        }
+
+        .news3 {
+            width: 450px;
+            height: 30px;
+            background-color: #3399FF;
+            margin-top: 10px;
+        }
+
+        .content .main>.hotpic {
+            width: 190px;
+            height: 400px;
+            margin-left: 10px;
+            float: left;
+            background-color: #CC3399;
+        }
+
+        .content>.rightPart>.links {
+            width: 650px;
+            height: 25px;
+            float: left;
+            margin: 10px 0 0 10px;
+            background-color: #339900;
+        }
+        .footer{
+            width: 970px;
+            height: 35px;
+            margin-top: 10px;
+            clear: both;
+            background-color: #000099;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container clearfix">
+        <div class="header">
+            <div class="logo">logo</div>
+            <div class="language">语言选择</div>
+            <div class="nav">导航条</div>
+        </div>
+
+        <div class="content">
+            <div class="banner">大广告</div>
+            <div class="rightPart">
+                <div class="main">
+                    <div class="news">
+                        <div class="news1"></div>
+                        <div class="news2"></div>
+                        <div class="news3"></div>
+                    </div>
+                    <div class="hotpic"></div>
+                </div>
+                <div class="links"></div>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+
+</html>

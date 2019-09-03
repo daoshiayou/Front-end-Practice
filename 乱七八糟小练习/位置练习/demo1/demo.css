@@ -1,0 +1,80 @@
+*{
+    margin:0;
+    padding:0;
+}
+.box{
+    width: 308px;
+    height: 307px;
+    margin: 100px;
+    border: 1px #FF9E40 solid;
+    position: relative;
+}
+.background{
+    width: 308px;
+    height: 196px;
+}
+.icon{
+    width:52px;
+    height: 28px;
+    background: url(img/sprite.png) no-repeat;
+    background-position: -108px 0;
+    position: absolute;
+    top: -9px;
+    left: 13px;
+}
+h4{
+    font-weight: normal;
+    font-size: 15px;
+}
+h4.pictext{
+    width: 308px;
+    line-height: 40px;
+    text-align: center;
+    background-color: black;
+    color: #CBCFD8;
+    position: absolute;
+    top: 156px;
+}
+.content{
+    width: 292px;
+    height: 95px;
+    padding:8px;
+    position: relative;
+}
+.content>h4{
+    color: #3D3D3D;
+    font-weight: bold;
+}
+.content p{
+    line-height: 20px;
+    font-size: 14px;
+    color: #495159;
+}
+.content>.price{
+    position: absolute;
+    top: 60px;
+}
+.price>.discount{
+    font-size: 30px;
+    color: #FF9222;
+}
+.price>.discount.yuan{
+    font-size: 20px;
+}
+.price>.origin{
+    font-size: 12px;
+    text-decoration: line-through;
+    color: #B0B0B0;
+}
+.content > .sold{
+    position: absolute;
+    top: 75px;
+    left: 238px;
+}
+.content > .sold > p{
+    color: #BAB6B4;
+    font-size: 15px;
+}
+.content > .sold > p>.number{
+    color:#ED4139;
+}
