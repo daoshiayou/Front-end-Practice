@@ -2,7 +2,7 @@ html,body,ul,li,ol,li,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img{ mar
 fieldset,img,input,button{ border:none; padding:0; margin:0; outline-style:none;}
 a{ text-decoration: none; color: #38B774;}
 body, input, textarea, select,button {
-    font: 12px/1.5 "Hiragino Sans GB", "Microsoft YaHei", "宋体", Arial, Tahoma, Helvetica, Geneva, sans-serif;
+    font: 12px/1.5 "Hiragino Sans GB", "Microsoft YaHei", Arial, Tahoma, Helvetica, Geneva, sans-serif;
     color: #444866;
 }
 h5{
@@ -94,6 +94,7 @@ header>nav button{
 header>nav button:hover{
     background-color: #2BA364;
     border: #38B774 1px solid;
+    transition: 0.3s
 }
 header>nav a{
     line-height: 59px;
@@ -129,6 +130,11 @@ section.banner > ul >li.banner4{
 }
 section.banner > ul >li.banners.on{
     display: block;
+    animation: showBanner 0.3s;
+}
+@keyframes showBanner{
+    0%{opacity: 0.75;}
+    100%{opacity: 1;}
 }
 section.banner > ul.list{
 position: absolute;
@@ -159,29 +165,46 @@ main > section{
     margin: 0 auto;
     margin-top: 50px;
 }
-main > section.indexpro > ul > li {
+.wapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+main > section.indexpro > .wapper  >ul{
+    width: 1820px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+main > section.indexpro > .wapper  >ul > li {
     width: 218px;
     height: 200px;
     float: left;
     text-align: center;
     cursor: pointer;
     margin-left:42px;
-    display: none;
 }
-main > section.indexpro > ul > li.show {
+main > section.indexpro > .wapper  >ul > li > a {
     display: block;
+    margin-top: 10px;
 }
-main > section.indexpro > ul > li.first {
+main > section.indexpro > .wapper  >ul > li.first {
     margin-left: 0;
 }
-main > section.indexpro > ul > li:hover {
+main > section.indexpro > .wapper  >ul > li:hover {
     color: #FFFFFF;
     background-color: #38B774;
+    opacity: 0.8;
+    transition: 0.8s;
 }
-main > section.indexpro > ul > li >img{
+main > section.indexpro > .wapper  >ul > li:hover >a {
+    color: #FFFFFF;
+}
+main > section.indexpro > .wapper  >ul > li >img{
     width: 218px;
 }
-main > section.indexpro > ul > li > a >img{
+main > section.indexpro > .wapper  >ul > li > a >img{
     margin-left: 5px;
 }
 main > section.indexpro > .hd{
@@ -233,6 +256,7 @@ main > section.maincon > section button{
 main > section.maincon > section button:hover{
     background-color: #38B774;
     color: #FFFFFF;
+    transition: 0.3s
 }
 main > section.maincon > section > article{
     position: absolute;
@@ -294,6 +318,7 @@ main > section.maincon > section.recruitment button{
 main > section.maincon > section.recruitment button:hover{
     background-color: rgba(255, 255, 255, 1);
     color: #38B774;
+    transition: 0.3s;
 }
 .recruitment > article{
     margin-left: 20px;
