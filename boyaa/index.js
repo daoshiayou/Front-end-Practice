@@ -29,29 +29,29 @@ window.onload = function () {
     let boxsLeft = boxs.offsetLeft;
     let boxButt = document.getElementsByClassName('indexpro')[0].children[1].children[0].children;
     setInterval(function nextBox() {
-            let target = boxsLeft - 260 < -1040 ? 0 : boxsLeft - 260;
-            updateBoxButt(target);
-            updateBox(target);
+        let target = boxsLeft - 260 < -1040 ? 0 : boxsLeft - 260;
+        updateBoxButt(target);
+        updateBox(target);
     }, 2000);
-    for(let i =0;i<boxButt.length;i++){
-        boxButt[i].addEventListener('click',function(){
-            let target = i*-1040;
+    for (let i = 0; i < boxButt.length; i++) {
+        boxButt[i].addEventListener('click', function () {
+            let target = i * -1040;
             updateBox(target);
             updateBoxButt(target);
         });
     }
-    function updateBoxButt(target){
-            if(target===0 && !boxButt[0].classList.contains('on')){
-                boxButt[0].classList.add('on');
-                boxButt[1].classList.remove('on');
-            }else if(target===-1040 && !boxButt[1].classList.contains('on')){
-                boxButt[0].classList.remove('on');
-                boxButt[1].classList.add('on');
-            };
+    function updateBoxButt(target) {
+        if (target === 0 && !boxButt[0].classList.contains('on')) {
+            boxButt[0].classList.add('on');
+            boxButt[1].classList.remove('on');
+        } else if (target === -1040 && !boxButt[1].classList.contains('on')) {
+            boxButt[0].classList.remove('on');
+            boxButt[1].classList.add('on');
+        };
     }
-    function updateBox(targetX){
-            clearInterval(boxs.timer);
-            boxs.timer = setInterval(function movBox() {
+    function updateBox(targetX) {
+        clearInterval(boxs.timer);
+        boxs.timer = setInterval(function movBox() {
             let speed = (targetX - boxs.offsetLeft) / 10;
             speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
             boxs.style.left = boxs.offsetLeft + speed + 'px';
@@ -62,6 +62,15 @@ window.onload = function () {
             }
         }, 15)
     }
+
+    document.getElementsByClassName('hamburger')[0].addEventListener('click', function () {
+        let ul = document.getElementsByTagName('nav')[0].children[1];
+        if (getCSS(ul, 'display') === 'none') {
+            ul.style.display = 'block';
+        } else {
+            ul.style.display = 'none';
+        }
+    });
 
     let topButt = document.getElementsByClassName('top')[0];
     timer = null;
@@ -77,6 +86,13 @@ window.onload = function () {
             }
         }, 10);
     });
+
+    function getCSS(el, attr) {
+        if (window.getComputedStyle) {
+            return attr ? window.getComputedStyle(el, null)[attr] : window.getComputedStyle(el, null);
+        }
+        return attr ? el.currentStyle[attr] : el.currentStyle;
+    }
 
     function scroll() {
         if (window.pageYOffset !== undefined) {

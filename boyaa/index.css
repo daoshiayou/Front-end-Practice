@@ -1,12 +1,13 @@
 html,body,ul,li,ol,li,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img{ margin:0; padding:0; }
 fieldset,img,input,button{ border:none; padding:0; margin:0; outline-style:none;}
 a{ text-decoration: none; color: #38B774;}
-body, input, textarea, select,button {
+html{
     font: 12px/1.5 "Hiragino Sans GB", "Microsoft YaHei", Arial, Tahoma, Helvetica, Geneva, sans-serif;
-    color: #444866;
+    color: #040405;
+    overflow-x: hidden;
 }
 h5{
-    font-size: 14px;
+    font-size: 1.16rem;
 }
 ul,ol{
     list-style: none;
@@ -24,34 +25,36 @@ ul,ol{
 .clearfix:after{
     clear: both;
 }
+.container{
+    width: 100%;
+}
 header{
-    font-size: 14px;
+    font-size: 1.16rem;
     background-color:#191D3A;
     width: 100%;
     height: 59px;
 }
 nav{
     max-width: 1000px;
-    height: 59px;
+    height: 100%;
     margin: 0 auto;
     position: relative;
 }
 header>nav>.logo{
     width: 156px;
     height:35px;
-    /* position: absolute; */
-    /* top: 15px; */
     float: left;
     margin-top: 10px;
 }
 header>nav ul{
     list-style: none;
-    margin-left: 15px;
+    height: 100%;
+    margin-left: 6.3%;
     float: left;
 }
 header>nav ul>li{
     width: 85px;
-    height: 59px;
+    height: 100%;
     line-height: 59px;
     text-align: center;
     float: left;
@@ -62,7 +65,6 @@ header>nav ul>li{
 header>nav ul>li.first{
     background-color: #252947;
     color: #E2E4E3;
-    margin-left: 48px;
 }
 header>nav ul>li:hover{
     color: #E2E4E3;
@@ -70,12 +72,21 @@ header>nav ul>li:hover{
 header>nav button{
     width: 100px;
     height: 34px;
-    font-size: 14px;
+    font-size: 1.16rem;
     border-radius: 2px;
     float: left;
     margin-left: 10px;
     background-color: #38B774;
     color:#FFFFFF;
+}
+header>nav .hamburger{
+    width: 38px;
+    height: 28px;
+    float: right;
+    background: url(img/list.png) no-repeat left center;
+    background-size:70%;
+    margin: 15px 0 0 20px;
+    display: none;
 }
 header>nav .language{
     float: right;
@@ -105,14 +116,18 @@ header>nav a.on,header>nav a:hover{
     color:#38B774;
 }
 section.banner{
-    max-width: 1920px;
     width: 100%;
-    max-height: 460px;
+    max-width: 1920px;
     height: 100%;
+    max-height: 460px;
     position: relative;
 }
+section.banner > ul{
+    max-width: 100%;
+}
 section.banner > ul >li.banners{
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
     height: 460px;
     display: none;
 }
@@ -140,7 +155,7 @@ section.banner > ul.list{
 position: absolute;
 margin-left: 50%;
 left:-54px;
-top: 430px;
+top: 93.478%;
 }
 section.banner > ul >li.circle{
     width: 12px;
@@ -202,7 +217,8 @@ main > section.indexpro > .wapper  >ul > li:hover >a {
     color: #FFFFFF;
 }
 main > section.indexpro > .wapper  >ul > li >img{
-    width: 218px;
+    /* width: 218px; */
+    width: 100%;
 }
 main > section.indexpro > .wapper  >ul > li > a >img{
     margin-left: 5px;
@@ -266,6 +282,7 @@ main > section.maincon > section > article{
 }
 main > section.maincon > section.news{
     background: url(pic/bynewsbg.jpg) no-repeat top left;
+    color: #444866;
 }
 main > section.maincon > section.news > article > ul{
     border-top: 1px #E7E8EB solid;
@@ -281,7 +298,7 @@ main > section.maincon > section.news > article li{
 }
 main > section.maincon > section.news > article li > a{
     float: left;
-    font-size: 14px;
+    font-size: 1.16rem;
     color: #444866;
 }
 main > section.maincon > section.news > article li > a:hover{
@@ -301,12 +318,14 @@ main > section.maincon > section.recruitment > .title{
     top: 35px;
     left:80px;
 }
+main > section.maincon > section.news > .title{
+    display: none;
+}
 .title > h4{
-    font-size: 28px;
+    font-size: 2.33rem;
     font-weight: bold;
 }
 .title > h5{
-    font-size: 12px;
     font-weight: normal;
 }
 main > section.maincon > section.recruitment button{
@@ -332,11 +351,10 @@ main > section.maincon > section.recruitment button:hover{
 }
 .recruitment > article > ul > li >a{
     color: #FFFFFF;
-    font-size: 14px;
+    font-size: 1.16rem;
 }
 footer{
     width: 100%;
-    height: 160px;
     padding-top: 35px;
     background-color: #191D3A;
 }
@@ -364,7 +382,7 @@ footer > .footer a:hover{
     color: #FFFFFF;
 }
 footer > .footer > p{
-    height: 50px;
+    min-height: 50px;
     line-height: 50px;
     color: #5F6E7E;
 }
@@ -384,4 +402,82 @@ img.gov{
 }
 .top:hover{
     background-position-y: 0;
+}
+
+@media screen and (max-width:1024px){
+    html{
+        font-size: 8px;
+    }
+    header>nav>.hamburger{
+        display: block;
+    }
+    header>nav ul, header>nav button{
+        display: none;
+    }
+    header>nav,main>section,footer>.footer{
+        width: 95%;
+    }
+    header>nav ul{
+        background-color: #252947;
+        margin: 0;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+        position: absolute;
+        top:55px;
+    }
+    header>nav ul>li{
+        float: none;
+        width: 100%;
+        text-align: center;
+        border-right: none;
+        border-top: 1px #000000 solid;
+    }
+    header>nav ul>li.first{
+        margin-left: 0;
+    }
+    section.banner > ul >li.banners{
+        max-height: 460px;
+        height: 0;
+        padding-bottom: 40%;
+    }
+    section.banner > ul >li.banners.on{
+        background-size: cover;
+    }
+    section.banner > ul >li.circle,main > section.indexpro > .hd > ul >li.circle{
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+        margin-left: 15px;
+    }
+    main > section.maincon > section{
+        width: 95%;
+        margin: 0 auto;
+        float: none;
+    }
+    main > section.maincon > section button{
+        left: 180px;
+    }
+    main > section.maincon > section.news{
+        background: url(pic/new_bg2.png) no-repeat top right;
+    }
+    main > section.maincon > section.news > .title{
+        background: url(pic/news.png) no-repeat;
+        position: absolute;
+        padding-left: 60px;
+        top: 35px;
+        left:20px;
+        display: block;
+    }
+    main > section.maincon > section.recruitment{
+        background: url(pic/person.png) no-repeat right top;
+        background-color: #38B774;
+        color: #FFFFFF;
+    }
+    main > section.maincon > section.recruitment > .title{
+    background: url(pic/person2.png) no-repeat;
+    padding-left: 60px;
+    top: 35px;
+    left:20px;
+    }
 }
