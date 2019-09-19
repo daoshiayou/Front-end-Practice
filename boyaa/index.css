@@ -1,3 +1,4 @@
+/* ---------------- base style ---------------- */
 html,body,ul,li,ol,li,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img{ margin:0; padding:0; }
 fieldset,img,input,button{ border:none; padding:0; margin:0; outline-style:none;}
 a{ text-decoration: none; color: #38B774;}
@@ -28,6 +29,8 @@ ul,ol{
 .container{
     width: 100%;
 }
+
+/* ---------------- header ---------------- */
 header{
     font-size: 1.16rem;
     background-color:#191D3A;
@@ -80,12 +83,6 @@ header>nav button{
     color:#FFFFFF;
 }
 header>nav .hamburger{
-    width: 38px;
-    height: 28px;
-    float: right;
-    background: url(img/list.png) no-repeat left center;
-    background-size:70%;
-    margin: 15px 0 0 20px;
     display: none;
 }
 header>nav .language{
@@ -115,35 +112,37 @@ header>nav a{
 header>nav a.on,header>nav a:hover{
     color:#38B774;
 }
-section.banner{
+
+/* ----------------------- banner --------------------*/
+div.banner{
     width: 100%;
     max-width: 1920px;
     height: 100%;
     max-height: 460px;
     position: relative;
 }
-section.banner > ul{
+div.banner > ul{
     max-width: 100%;
 }
-section.banner > ul >li.banners{
+div.banner > ul >li.banners{
     max-width: 100%;
     max-height: 100%;
     height: 460px;
     display: none;
 }
-section.banner > ul >li.banner1{
+div.banner > ul >li.banner1{
     background: url(pic/banner20190329.jpg) no-repeat center center;
 }
-section.banner > ul >li.banner2{
+div.banner > ul >li.banner2{
     background: url(pic/banner20190523.jpg) no-repeat center center;
 }
-section.banner > ul >li.banner3{
+div.banner > ul >li.banner3{
     background: url(pic/banner20190828.jpg) no-repeat center center;
 }
-section.banner > ul >li.banner4{
+div.banner > ul >li.banner4{
     background: url(pic/probanner4.jpg) no-repeat center center;
 }
-section.banner > ul >li.banner4 >.ad >dl:first-of-type {
+div.banner > ul >li.banner4 >.ad >dl:first-of-type {
     width: 115px;
     height: 37px;
     position: absolute;
@@ -152,21 +151,21 @@ section.banner > ul >li.banner4 >.ad >dl:first-of-type {
     background: url(img/online.png) no-repeat top left;
     cursor: pointer;
 }
-section.banner > ul >li.banner4 >.ad >dl:first-of-type:hover {
+div.banner > ul >li.banner4 >.ad >dl:first-of-type:hover {
     background: url(img/online.png) no-repeat -120px top;
 }
-section.banner > ul >li.banner4 >.ad >dl:first-of-type >dt {
+div.banner > ul >li.banner4 >.ad >dl:first-of-type >dt {
     margin-left: 20%;
     line-height: 37px;
 }
-section.banner > ul >li.banner4 >.ad >dl:first-of-type >dd {
+div.banner > ul >li.banner4 >.ad >dl:first-of-type >dd {
     width: 115px;
     height: 37px;
     background-color: #FFFFFF;
     border-radius: 0 0 15px 15px;
     display: none;
 }
-section.banner > ul >li.banner4 >.ad >dl:first-of-type >dd > a {
+div.banner > ul >li.banner4 >.ad >dl:first-of-type >dd > a {
     width: 25px;
     height: 25px;
     margin-left: 8px;
@@ -174,34 +173,34 @@ section.banner > ul >li.banner4 >.ad >dl:first-of-type >dd > a {
     float: left;
     cursor: pointer;
 }
-section.banner > ul >li.banner4 >.ad >dl:first-of-type >dd > a:nth-of-type(1) {
+div.banner > ul >li.banner4 >.ad >dl:first-of-type >dd > a:nth-of-type(1) {
     margin-left: 12px;
     background: url(img/online.png) no-repeat left bottom;
 }
-section.banner > ul >li.banner4 >.ad >dl:first-of-type >dd > a:nth-of-type(2) {
+div.banner > ul >li.banner4 >.ad >dl:first-of-type >dd > a:nth-of-type(2) {
     background: url(img/online.png) no-repeat -50px bottom;
 }
-section.banner > ul >li.banner4 >.ad >dl:first-of-type >dd > a:nth-of-type(3) {
+div.banner > ul >li.banner4 >.ad >dl:first-of-type >dd > a:nth-of-type(3) {
     background: url(img/online.png) no-repeat -100px bottom;
 }
-section.banner > ul >li.banner4 >.ad >dl:first-of-type:hover >dd {
+div.banner > ul >li.banner4 >.ad >dl:first-of-type:hover >dd {
     display: block;
 }
-section.banner > ul >li.banner4 >.ad > p{
+div.banner > ul >li.banner4 >.ad > p{
     position: absolute;
     max-width: 32%;
     left: 53.5%;
     top: 35%;
     font-size: 1.16em;
 }
-section.banner > ul >li.banner4 >.ad >dl:nth-of-type(2) {
+div.banner > ul >li.banner4 >.ad >dl:nth-of-type(2) {
     width: 460px;
     height: 150px;
     position: absolute;
     top: 45%;
     left: 53.5%;
 }
-section.banner > ul >li.banner4 >.ad >dl:nth-of-type(2) >dt {
+div.banner > ul >li.banner4 >.ad >dl:nth-of-type(2) >dt {
     height: 35px;
     line-height: 35px;
     font-size: 1.5rem;
@@ -209,7 +208,7 @@ section.banner > ul >li.banner4 >.ad >dl:nth-of-type(2) >dt {
     background: url(img/download.png) no-repeat 5px 10px;
     margin-bottom: 20px;
 }
-section.banner > ul >li.banner4 >.ad >dl:nth-of-type(2) >dd {
+div.banner > ul >li.banner4 >.ad >dl:nth-of-type(2) >dd {
     width: 83px;
     height: 106px;
     float: left;
@@ -218,43 +217,44 @@ section.banner > ul >li.banner4 >.ad >dl:nth-of-type(2) >dd {
     opacity: 0.7;
     cursor: pointer;
 }
-section.banner > ul >li.banner4 >.ad >dl:nth-of-type(2) >dd:hover {
+div.banner > ul >li.banner4 >.ad >dl:nth-of-type(2) >dd:hover {
     opacity: 1;
+    transition: 0.3s;
 }
-section.banner > ul >li.banner4 >.ad >dl:nth-of-type(2) >dd:nth-of-type(1) {
-    background: url(img/pad.png) no-repeat 26px -175px;
+div.banner > ul >li.banner4 >.ad >dl:nth-of-type(2) >dd:nth-of-type(1) {
+    background: url(img/pad.png) no-repeat 29px -175px;
     background-color: #FFFFFF;
     border-radius: 10px 0 0 10px;
 }
-section.banner > ul >li.banner4 >.ad >dl:nth-of-type(2) >dd:nth-of-type(2) {
+div.banner > ul >li.banner4 >.ad >dl:nth-of-type(2) >dd:nth-of-type(2) {
     background: url(img/pad.png) no-repeat 26px 25px;
     background-color: #FFFFFF;
 }
-section.banner > ul >li.banner4 >.ad >dl:nth-of-type(2) >dd:nth-of-type(3) {
+div.banner > ul >li.banner4 >.ad >dl:nth-of-type(2) >dd:nth-of-type(3) {
     background: url(img/pad.png) no-repeat 20px -75px;
     background-color: #FFFFFF;
 }
-section.banner > ul >li.banner4 >.ad >dl:nth-of-type(2) >dd:nth-of-type(4) {
+div.banner > ul >li.banner4 >.ad >dl:nth-of-type(2) >dd:nth-of-type(4) {
     background: url(img/pad.png) no-repeat 24px -265px;
     background-color: #FFFFFF;
 }
-section.banner > ul >li.banner4 >.ad >dl:nth-of-type(2) >dd:nth-of-type(5) {
+div.banner > ul >li.banner4 >.ad >dl:nth-of-type(2) >dd:nth-of-type(5) {
     width: 111px;
     background: url(pic/landlords80.png) no-repeat 16px 16px;
     background-color: #FFFFFF;
     border-radius: 0 10px 10px 0;
 }
-section.banner > ul >li.banner4 >.ad >dl:nth-of-type(2) >dd >p{
+div.banner > ul >li.banner4 >.ad >dl:nth-of-type(2) >dd >p{
     width: 100%;
     text-align: center;
     position: absolute;
     bottom: 10%;
 }
-section.banner > ul >li.banner4 >.ad  button{
+div.banner > ul >li.banner4 >.ad  button{
     display: none;
 }
 
-section.banner > ul >li.banners.on{
+div.banner > ul >li.banners.on{
     display: block;
     animation: showBanner 0.3s;
 }
@@ -262,13 +262,13 @@ section.banner > ul >li.banners.on{
     0%{opacity: 0.75;}
     100%{opacity: 1;}
 }
-section.banner > ul.list{
+div.banner > ul.list{
 position: absolute;
 margin-left: 50%;
 left:-54px;
 top: 93.478%;
 }
-section.banner > ul >li.circle{
+div.banner > ul >li.circle{
     width: 12px;
     height: 12px;
     border-radius: 6px;
@@ -278,32 +278,36 @@ section.banner > ul >li.circle{
     opacity: 0.5;
     cursor: pointer;
 }
-section.banner > ul >li.circle.on,section.banner > ul >li.circle:hover{
+div.banner > ul >li.circle.on,div.banner > ul >li.circle:hover{
     opacity: 1;
 }
+
+
+/* ------------------------ main --------------------- */
 main{
     width: 100%;
     background: url(pic/indexmainbg.jpg) no-repeat bottom center;
     padding-bottom: 50px;
 }
-main > section{
+/* ------------------------ main slips --------------------- */
+main > div.indexpro{
     width: 1000px;
     margin: 0 auto;
     margin-top: 50px;
 }
-.wapper{
+div.wapper{
     width: 100%;
     height: 100%;
     position: relative;
     overflow: hidden;
 }
-main > section.indexpro > .wapper  >ul{
+main > div.indexpro > div.wapper  >ul{
     width: 1820px;
     height: 200px;
     overflow: hidden;
     position: relative;
 }
-main > section.indexpro > .wapper  >ul > li {
+main > div.indexpro > div.wapper  >ul > li {
     width: 218px;
     height: 200px;
     float: left;
@@ -311,34 +315,34 @@ main > section.indexpro > .wapper  >ul > li {
     cursor: pointer;
     margin-left:42px;
 }
-main > section.indexpro > .wapper  >ul > li > a {
+main > div.indexpro > div.wapper  >ul > li > a {
     display: block;
     margin-top: 10px;
 }
-main > section.indexpro > .wapper  >ul > li.first {
+main > div.indexpro > div.wapper  >ul > li:first-of-type {
     margin-left: 0;
 }
-main > section.indexpro > .wapper  >ul > li:hover {
+main > div.indexpro > div.wapper  >ul > li:hover {
     color: #FFFFFF;
     background-color: #38B774;
     opacity: 0.8;
     transition: 0.8s;
 }
-main > section.indexpro > .wapper  >ul > li:hover >a {
+main > div.indexpro > div.wapper  >ul > li:hover >a {
     color: #FFFFFF;
 }
-main > section.indexpro > .wapper  >ul > li >img{
+main > div.indexpro > div.wapper  >ul > li >img{
     width: 100%;
 }
-main > section.indexpro > .wapper  >ul > li > a >img{
+main > div.indexpro > div.wapper  >ul > li > a >img{
     margin-left: 5px;
 }
-main > section.indexpro > .hd{
+main > div.indexpro > .hd{
     border-top: 1px #DBE1E7 solid;
     margin-top: 19px;
     position: relative;
 }
-main > section.indexpro > .hd > ul{
+main > div.indexpro > .hd > ul{
     position: absolute;
     margin-left: 50%;
     background-color: #FFFFFF;
@@ -346,7 +350,7 @@ main > section.indexpro > .hd > ul{
     left: -27px;
     top: -6px;
 }
-main > section.indexpro > .hd > ul >li.circle{
+main > div.indexpro > .hd > ul >li.circle{
     width: 12px;
     height: 12px;
     border-radius: 6px;
@@ -355,19 +359,18 @@ main > section.indexpro > .hd > ul >li.circle{
     background-color: #B5C0CB;
     cursor: pointer;
 }
-main > section.indexpro > .hd  ul >li.circle.on,main > section.indexpro > .hd > ul >li.circle:hover{
+main > div.indexpro > .hd  ul >li.circle.on,main > div.indexpro > .hd > ul >li.circle:hover{
     background-color: #38B774;
 }
-main > section.maincon > section button{
-    position: absolute;
-}
-main > section.maincon > section{
+
+/* ------------------------ main section --------------------*/
+main > div.maincon > section{
     float: left;
     width: 500px;
     height: 310px;
     position: relative;
 }
-main > section.maincon > section button{
+main > div.maincon > section button{
     position: absolute;
     width: 65px;
     height: 28px;
@@ -379,72 +382,76 @@ main > section.maincon > section button{
     color: #38B774;
     cursor: pointer;
 }
-main > section.maincon > section button:hover{
+main > div.maincon > section button:hover{
     background-color: #38B774;
     color: #FFFFFF;
     transition: 0.3s
 }
-main > section.maincon > section > article{
+main > div.maincon > section > article{
     position: absolute;
     width: 100%;
     height: 200px;
     top: 110px;
 }
-main > section.maincon > section.news{
+main > div.maincon > section > .title > h4{
+    font-size: 2.33rem;
+    font-weight: bold;
+}
+main > div.maincon > section > .title > h5{
+    font-weight: normal;
+}
+
+/* ------------------------ news section --------------------- */
+main > div.maincon > section.news{
     background: url(pic/bynewsbg.jpg) no-repeat top left;
     color: #444866;
 }
-main > section.maincon > section.news > article > ul{
+main > div.maincon > section.news > .title{
+    display: none;
+}
+main > div.maincon > section.news > article > ul{
     border-top: 1px #E7E8EB solid;
     background-color: #FFFFFF;
     width: 100%;
 }
-main > section.maincon > section.news > article li{
+main > div.maincon > section.news > article li{
     height: 48px;
     width: 90%;
     margin: 0 auto;
     border-bottom: 1px #E7E8EB solid;
     line-height: 48px;
 }
-main > section.maincon > section.news > article li > a{
+main > div.maincon > section.news > article li > a{
     float: left;
     font-size: 1.16rem;
     color: #444866;
 }
-main > section.maincon > section.news > article li > a:hover{
+main > div.maincon > section.news > article li > a:hover{
     color: #38B774;
 }
-main > section.maincon > section.news > article li > span{
+main > div.maincon > section.news > article li > span{
     float: right;
     display: block;
     color: #B5C0CB;
 }
-main > section.maincon > section.recruitment{
+
+/* -------------------------- recruitment section ------------------*/
+main > div.maincon > section.recruitment{
     background: url(pic/byhrbg3.jpg) no-repeat top left;
     color: #FFFFFF;
 }
-main > section.maincon > section.recruitment > .title{
+main > div.maincon > section.recruitment > .title{
     position: absolute;
     top: 35px;
     left:80px;
 }
-main > section.maincon > section.news > .title{
-    display: none;
-}
-.title > h4{
-    font-size: 2.33rem;
-    font-weight: bold;
-}
-.title > h5{
-    font-weight: normal;
-}
-main > section.maincon > section.recruitment button{
+main > div.maincon > div.recruitment button{
     border: 1px #FFFFFF solid;
     background-color: rgba(255, 255, 255, 0);
     color: #FFFFFF;
     cursor: pointer;
 }
-main > section.maincon > section.recruitment button:hover{
+main > div.maincon > div.recruitment button:hover{
     background-color: rgba(255, 255, 255, 1);
     color: #38B774;
     transition: 0.3s;
@@ -463,6 +470,9 @@ main > section.maincon > section.recruitment button:hover{
     color: #FFFFFF;
     font-size: 1.16rem;
 }
+
+
+/* --------------------- footer ----------------------- */
 footer{
     width: 100%;
     padding-top: 35px;
@@ -481,7 +491,7 @@ footer > .footer >.links > li{
     padding: 0 8px 0 8px;
     border-left: 1px #5F6E7E solid;
 }
-footer > .footer >.links > li.first{
+footer > .footer >.links > li:first-of-type{
     padding-left: 0;
     border-left: none;
 }
@@ -514,18 +524,28 @@ img.gov{
     background-position-y: 0;
 }
 
+/* ------------------- width < 1024px --------------------- */
 @media screen and (max-width:1024px){
+    /* --------- font-size ------------ */
     html{
         font-size: 8px;
     }
+    /* ---------- small sreen wapper ------------- */
+    header>nav,main>div,footer>.footer{
+        width: 95%;
+    }
+    /* --------- header nav ---------- */
     header>nav>.hamburger{
+        width: 38px;
+        height: 28px;
+        float: right;
+        background: url(img/list.png) no-repeat left center;
+        background-size:70%;
+        margin: 15px 0 0 20px;
         display: block;
     }
     header>nav ul, header>nav button{
         display: none;
-    }
-    header>nav,main>section,footer>.footer{
-        width: 95%;
     }
     header>nav ul{
         background-color: #252947;
@@ -543,18 +563,25 @@ img.gov{
         border-right: none;
         border-top: 1px #000000 solid;
     }
-    header>nav ul>li.first{
+    header>nav ul>li:first-of-type{
         margin-left: 0;
     }
-    section.banner > ul >li.banners{
+
+    /* --------------- responsive banner --------------- */
+    div.banner > ul >li.banners{
         max-height: 460px;
         height: 0;
         padding-bottom: 40%;
     }
-    section.banner > ul >li.banner4 >.ad >dl{
+    div.banner > ul >li.banners.on{
+        background-size: cover;
+    }
+    
+    /* --------------- simplify the AD content ---------------------*/
+    div.banner > ul >li.banner4 >.ad >dl{
         display: none;
     }
-    section.banner > ul >li.banner4 >.ad button{
+    div.banner > ul >li.banner4 >.ad button{
         width: 20%;
         height: 10%;
         background-color: #191D3A;
@@ -565,27 +592,24 @@ img.gov{
         cursor: pointer;
         display: block;
     }
-    section.banner > ul >li.banners.on{
-        background-size: cover;
-    }
-    section.banner > ul >li.circle,main > section.indexpro > .hd > ul >li.circle{
+    div.banner > ul >li.circle,main > div.indexpro > .hd > ul >li.circle{
         width: 8px;
         height: 8px;
         border-radius: 4px;
         margin-left: 15px;
     }
-    main > section.maincon > section{
+    main > div.maincon > section{
         width: 95%;
         margin: 0 auto;
         float: none;
     }
-    main > section.maincon > section button{
+    main > div.maincon > section button{
         left: 180px;
     }
-    main > section.maincon > section.news{
+    main > div.maincon > section.news{
         background: url(pic/new_bg2.png) no-repeat top right;
     }
-    main > section.maincon > section.news > .title{
+    main > div.maincon > section.news > .title{
         background: url(pic/news.png) no-repeat;
         position: absolute;
         padding-left: 60px;
@@ -593,12 +617,12 @@ img.gov{
         left:20px;
         display: block;
     }
-    main > section.maincon > section.recruitment{
+    main > div.maincon > section.recruitment{
         background: url(pic/person.png) no-repeat right top;
         background-color: #38B774;
         color: #FFFFFF;
     }
-    main > section.maincon > section.recruitment > .title{
+    main > div.maincon > section.recruitment > .title{
     background: url(pic/person2.png) no-repeat;
     padding-left: 60px;
     top: 35px;
